@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/board.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="EUC-KR">
@@ -14,17 +14,8 @@
 </head>
 <body>
 	<div id="display">
-		<div id="header">
-			<h1>This is my borad page~</h1>
-		</div>
-		<div id="section">
-			<div class="board"><a href="login.jsp">로그인</a></div>	
-			<div class="login"><a href="board.jsp">게시판</a></div>
-		</div>
-		<div id="footer">
-			<span>JSP $ Servlet을 활용하여 게시판을 만들어 보았습니다.</span>
-		</div>
-		
+		<h1>board게시판 페이지</h1>
+		<a href="boardWrite.jsp">글쓰기</a>
 	</div>
 </body>
 </html>
