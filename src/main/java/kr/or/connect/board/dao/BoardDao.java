@@ -38,7 +38,7 @@ public class BoardDao {
 					String userID = rs.getString(2);
 					String title = rs.getString(3);
 					String content= rs.getString(4);
-					Date date = rs.getDate(5);
+					String date = rs.getString(5);
 
 
 					BoardDto board = new BoardDto(num, userID, title, content, date);
@@ -63,7 +63,7 @@ public class BoardDao {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		String sql = "INSERT INTO todo (userID, title, content, date) VALUES ( ?, ?, ?, ?)";
+		String sql = "INSERT INTO board (userID, title, content, date) VALUES ( ?, ?, ?, ?)";
 
 		try (Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
 				PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -71,7 +71,7 @@ public class BoardDao {
 			ps.setString(1, board.getUserID());
 			ps.setString(2, board.getTitle());
 			ps.setString(3, board.getContent());
-			ps.setDate(4, (java.sql.Date) board.getDate());
+			ps.setString(4, board.getDate());
 
 
 

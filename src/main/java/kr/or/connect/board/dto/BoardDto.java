@@ -7,7 +7,28 @@ public class BoardDto {
 	private String userID;
 	private String title;
 	private String content;
-	private Date date;
+	private String date;
+	
+	public BoardDto() {
+		
+	}
+	public BoardDto(String userID, String title, String content, String date) {
+		super();
+		this.userID = userID;
+		this.title = title;
+		this.content = content;
+		this.date = date;
+	}
+
+	
+	public BoardDto(int num, String userID , String title, String content, String date) {
+		super();
+		this.num = num;
+		this.userID = userID;
+		this.title = title;
+		this.content = content;
+		this.date = date;
+	}
 	
 	public int getNum() {
 		return num;
@@ -33,22 +54,13 @@ public class BoardDto {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
-	public BoardDto() {
-		
-	}
-	public BoardDto(int num, String userID, String title, String content, Date date) {
-		this.num = num;
-		this.userID = userID;
-		this.title = title;
-		this.content = content;
-		this.date = date;
-	}
+	
 	
 	
 

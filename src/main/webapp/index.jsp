@@ -1,8 +1,11 @@
 <%@page import="java.awt.List"%>
 <%@page import="java.io.Console"%>
+<%@page import="kr.or.connect.board.dto.BoardDto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,11 +18,11 @@
 <body>
 	<div id="display">
 		<div id="header">
-			<h1>This is my borad page~</h1>
+			<h1>This is my borad page~~~</h1>
 		</div>
 		<div id="section">
 			<div class="board"><a href="login.jsp">로그인</a></div>	
-			<div class="login"><a href="board.jsp">게시판</a></div>
+			<div class="login"><a href="list">게시판</a></div>
 		</div>
 		<div id="footer">
 			<span>JSP $ Servlet을 활용하여 게시판을 만들어 보았습니다.</span>
