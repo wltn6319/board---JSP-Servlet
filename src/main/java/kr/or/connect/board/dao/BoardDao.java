@@ -84,6 +84,47 @@ public class BoardDao {
 	}
 
 
+	public BoardDto getDetail(int num) {
+		
+		BoardDto board = new BoardDto();
+
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		String sql = "SELECT * FROM board WHERE num = ?";
+		try (Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
+				PreparedStatement ps = conn.prepareStatement(sql)) {
+
+			ps.setInt(1, num);
+
+			
+			try (ResultSet rs = ps.executeQuery()) {
+
+				if(rs.next()) {
+					board.setNum(rs.getInt(1));
+					board.setUserID(rs.getString(2));
+					board.setTitle(rs.getString(3));
+					board.setContent(rs.getString(4));
+					board.setDate(rs.getString(5)); 
+
+				}
+
+					
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return board;
+		
+	}
+
 	
 	
 }

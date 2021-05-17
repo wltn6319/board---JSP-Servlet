@@ -18,7 +18,7 @@
 </head>
 <body>
 <div id="display">
-		  	   <button type="button" class="btn btn-link">글쓰기</button>
+		  	   <a href="write"><button type="button" class="btn btn-link">글쓰기</button></a>
 
 	<div class="container">    
 	  <table class="table table-hover">
@@ -35,7 +35,7 @@
 			<tr>
 				<td>${list.num}</td>
 				<td>${list.userID}</td>
-				<td>${list.title}</td>
+				<td><a href="detail?id=${list.num}">${list.title}</a></td> 
 				<td>${list.date}</td>	
 			</tr>	
 			</c:forEach>
