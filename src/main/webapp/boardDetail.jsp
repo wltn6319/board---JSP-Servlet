@@ -17,7 +17,26 @@
 </head>
 <body>
 <div id="display">
+	<div class="button">
+	<button type="button"  onclick="location.href='list'">이전</button>
+	<button type="button"  onclick="location.href='boardDelete?id=${detail.num}'">삭제</button>
+	<button type="button"  onclick="location.href='boardUpdate'">수정</button>
+	</div>
+	<div id="details">
 
+		<div class="detail">
+			<span class="userId">작성자</span><span class="info_usreId cnt">${detail.userID}</span>
+			<span class="date">날짜</span><span class="info_date cnt">${detail.date}</span>
+		</div>
+		<div class="detail">
+			<span class="title">제목</span><span class="info_title cnt">${detail.title}</span>
+		</div>
+		<div class="detail">
+			<span class="content">내용</span><span class="info_content cnt">${detail.content}</span>
+		</div>
+
+   </div>
+	
    </div>
 
 

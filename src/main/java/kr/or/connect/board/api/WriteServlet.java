@@ -58,7 +58,7 @@ public class WriteServlet extends HttpServlet {
 
 	System.out.println("한건 입력 완료!");
 
-	response.sendRedirect("/board");
+	response.sendRedirect("/board/list");
 	}
 
 }

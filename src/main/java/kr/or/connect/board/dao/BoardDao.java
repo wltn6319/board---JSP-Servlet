@@ -125,6 +125,31 @@ public class BoardDao {
 		
 	}
 
+	public int deleteBoard(int num) {
+		int insertCount = 0;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		String sql = "DELETE FROM board WHERE num = ?";
+
+		try (Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
+				PreparedStatement ps = conn.prepareStatement(sql)) {
+
+			ps.setInt(1, num);
+
+			insertCount = ps.executeUpdate();
+
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return insertCount;
+	}
+
+
+	
 	
 	
 }

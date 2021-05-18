@@ -6,3 +6,55 @@
 	height: 90vh;
 		
 }
+
+#details{
+	padding:100px;
+	
+}
+
+.button{
+	position: absolute;
+	top:100px;
+	left:200px;
+}
+
+.detail{
+	display: flex;
+	height: 50px;
+	font-size:17px;
+	border-left:1px solid #bfbfff;
+	
+	
+}
+
+.detail:first-child>span,
+.title,
+.content {
+	width: 25%;
+	border-top: 1px solid #bfbfff;
+}
+
+.detail:last-child{
+	border-bottom: 1px solid #bfbfff;
+	height: 200px;;
+}
+
+.detail>span{
+	padding-top:10px;
+	padding-left:10px;
+}
+
+.cnt{
+	background-color: white;
+}
+
+
+.info_title,
+.info_content {
+	width:75%;
+	border-top: 1px solid #bfbfff;
+}
+
+
+	
+
