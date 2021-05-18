@@ -150,7 +150,32 @@ public class BoardDao {
 
 
 	
-	
+	public int updateBoard(String title, String content, int num, String date) {
+		int updateCount = 0;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		String sql = "UPDATE board SET title = ?, content = ?, date = ? WHERE num = ? ";
+
+		try (Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
+				PreparedStatement ps = conn.prepareStatement(sql)) {
+			ps.setString(1, title);
+			ps.setString(2, content);
+			ps.setString(3, date);
+			ps.setInt(4, num);
+
+
+			updateCount = ps.executeUpdate();
+
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return updateCount;
+	}
+
 	
 }
 

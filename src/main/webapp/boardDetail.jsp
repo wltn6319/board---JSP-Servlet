@@ -18,9 +18,10 @@
 <body>
 <div id="display">
 	<div class="button">
-	<button type="button"  onclick="location.href='list'">이전</button>
-	<button type="button"  onclick="location.href='boardDelete?id=${detail.num}'">삭제</button>
-	<button type="button"  onclick="location.href='boardUpdate'">수정</button>
+	<a href="list"><input type="submit" value="이전"/></a>
+	<a href="boardDelete?id=${detail.num}"><input type="submit" value="삭제" onclick="if(!confirm('삭제하시면 복구할수 없습니다. \n 정말로 삭제하시겠습니까??')){return false;}" /></a>
+	<a href="boardupdate?id=${detail.num}"><input type="submit" value="수정"/></a>
+	
 	</div>
 	<div id="details">
 
